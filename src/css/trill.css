@@ -1,0 +1,259 @@
+@charset "utf-8";
+.clear{
+    clear: both;
+}
+.video-player {
+    height: 100vh;
+    width: 100vw;
+}
+
+.product_swiper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.van_swipe {
+    width: 100vw;
+    height: 100vh;
+}
+
+.van-swipe {
+    width: 100%;
+    height: 100%;
+}
+
+.container_box {
+    width: 100vw;
+    height: 100vh;
+}
+
+.video_box {
+    object-fit: fill !important;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+video {
+    object-position: 0 0;
+}
+
+.icon_play {
+    position: absolute;
+    top: 44%;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    margin: auto;
+    z-index: 999;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.play,
+.platStart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+/* 点赞，转发 */
+.tools_right {
+    z-index: 1001;
+    position: absolute;
+    right: 16px;
+    bottom: 238px
+}
+
+.tools_r_li {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.tools_r_li:last-child {
+    margin-bottom: 0px;
+}
+
+.icon_right {
+    margin-bottom: 5px;
+    font-size: 42px;
+    display: block;
+    text-shadow: 0px 0px 10px #9d9d9d;
+    /*transition: .5s;*/
+}
+
+.production_box {
+    z-index: 1001;
+    position: absolute;
+    /* right: 16px; */
+    bottom: 60px;
+    text-align: left;
+    padding: 0 15px 15px 15px;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.2),rgba(0,0,0,0)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(top, rgba(0,0,0,0.2), rgba(0,0,0,0)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.2),rgba(0,0,0,0)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0)); /* 标准的语法 */
+}
+.production_name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.production_des {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 62px;
+}
+.container_bottom{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    height: 60px;
+    border-top: 1px solid rgba(255,255,255,0.7);
+}
+
+.production_top{
+    display: inline-block;
+    padding: 6px;
+    margin-bottom: 5px;
+    background: rgba(0,0,0,.3);
+    border-radius: 6px;
+    margin-top: 5px;
+}
+.product_go{
+    color: #fbdd21;
+}
+.production_title{
+    margin-left: 4px;
+}
+.bottom_tab{
+    width: 50%;
+    text-align: center;
+    float: left;
+    color: #c9c9c9;
+    padding: 10px 0;
+}
+.bottom_tab_span{
+    line-height: 38px;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0 4px;
+    transition: .5s all;
+}
+.tab_active .bottom_tab_span{
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+.icon-shoucang{
+    transition: .5s all;
+}
+.follow_active{
+    color: #f44;
+    animation: showHeart .5s ease-in-out 0s;
+}
+/*animation-name：用来调用@keyframes定义好的动画，与@keyframes定义的动画名称一致*/
+/*animation-duration ：指定元素播放动画所持续的时间*/
+/*animatino-timing-function ： 和transition中的transition-timing-function 中的值一样。根据上面@keframes中分析的animation中可能存在多个小动画，因此这里的值设置是针对每一个小动画所在时间范围内的属性变换速率。*/
+/*animation-delay：定义在浏览器开始执行动画之前等待的时间，这里是指整个animation执行之前的等待时间，而不是上面说的多个小动画*/
+/*animation-iteration-count：定义动画的播放次数，其通常为整数，默认是1,；取值为infinite，动画将无限次的播放。*/
+/*animation-direction：主要用来设置动画播放方向*/
+@keyframes showHeart {
+    0%{
+        color: #f44;
+        transform: scale(1);
+    }
+    25%{
+        color: #fff;
+        transform: scale(0);
+    }
+    80%{
+        color: #f44;
+        transform: scale(1.2);
+    }
+    100%{
+        color: #f44;
+        transform: scale(1);
+    }
+}
+/*分享样式*/
+.share_hover{
+    position: fixed;
+    display: none;
+
+}
+
+.share_box{
+    position: fixed;
+    bottom: -300px;
+    width: 100%;
+    z-index: 1002;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: .5s;
+}
+.share_tips{
+    text-align: center;
+    line-height: 38px;
+    color: #333;
+}
+.share_ul{
+    box-sizing: border-box;
+    padding: 0 25px 25px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.share_li{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.share_li i{
+    font-size: 44px;
+}
+.share_cancel{
+    text-align: center;
+    line-height: 48px;
+    color: #777;
+    text-align: center;
+}
+.pengyouquan{
+    color: #47D000;
+
+}
+.pengyouquan_li{
+    animation: rotating 8s linear infinite
+}
+@keyframes rotating{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+.weixin{
+    color:#20CA2E;
+}
+.lianjie{
+    color: #cdcdcd;
+}
+.share_active{
+    bottom: 0px;
+}
